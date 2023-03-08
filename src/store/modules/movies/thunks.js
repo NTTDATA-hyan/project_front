@@ -3,9 +3,10 @@ import getMovie from "./actions";
 
 const getMovieThunk = (movie, setError) => (dispatch) => {
   api
-    .get(`https://www.omdbapi.com/?i=tt3896198&apikey=8510023c&t=${movie}`)
+    .get("", movie)
     .then((res) => {
       dispatch(getMovie(res.data));
+      console.log(res);
     })
     .catch((err) => console.log(err));
 };
