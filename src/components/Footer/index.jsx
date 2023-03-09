@@ -3,7 +3,7 @@ import "./style.scss";
 const Footer = () => {
   return (
     <div className="footer-div">
-      <p>Todos os direitos reservados &copy; </p>
+      <p>All rights reserved &copy; </p>
       <a href="https://www.linkedin.com/in/hyanlopes/">
         <AiFillLinkedin color="#78868f" />
       </a>

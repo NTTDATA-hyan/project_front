@@ -21,7 +21,7 @@ const Movie = () => {
         <div className="movie-div">
           <section className="movie-div_details">
             <h3>{movie.Title}</h3>
-            <p>{movie.Plot}</p>
+            <p>{movie.Plot != "N/A" ? movie.Plot : "No description found"}</p>
             <p className="bold">
               Actor: <span>{movie.Actors}</span>
             </p>
