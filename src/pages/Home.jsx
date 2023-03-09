@@ -6,10 +6,10 @@ const Home = () => {
   return (
     <div className="home-div">
       <Header />
-      <main>
+      <section>
         <Main />
         <Footer />
-      </main>
+      </section>
     </div>
   );
 };

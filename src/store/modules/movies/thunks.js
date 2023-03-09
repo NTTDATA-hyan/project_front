@@ -1,13 +1,15 @@
+import { toast } from "react-toastify";
 import api from "../../../services/api";
 import getMovie from "./actions";
-
 const getMovieThunk = (movie, setError) => (dispatch) => {
   api
     .post("", { title: movie })
     .then((res) => {
-      console.log(res);
       dispatch(getMovie(res.data));
+      if (res.data.Error) {
+        toast.error(res.data.Error);
+      }
     })
-    .catch((err) => console.log(err));
+    .catch((err) => toast.error(err.data));
 };
 export default getMovieThunk;

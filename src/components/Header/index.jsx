@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header-container">
       <h1>Movie</h1>
 
-      <BiCameraMovie />
+      <BiCameraMovie size={30} />
     </div>
   );
 };
