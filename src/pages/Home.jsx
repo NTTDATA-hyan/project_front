@@ -4,10 +4,12 @@ import Main from "../components/Main";
 import "./style.scss";
 const Home = () => {
   return (
-    <div>
+    <div className="home-div">
       <Header />
-      <Main />
-      <Footer />
+      <main>
+        <Main />
+        <Footer />
+      </main>
     </div>
   );
 };

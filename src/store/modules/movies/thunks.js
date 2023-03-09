@@ -3,10 +3,10 @@ import getMovie from "./actions";
 
 const getMovieThunk = (movie, setError) => (dispatch) => {
   api
-    .get("", movie)
+    .post("", { title: movie })
     .then((res) => {
-      dispatch(getMovie(res.data));
       console.log(res);
+      dispatch(getMovie(res.data));
     })
     .catch((err) => console.log(err));
 };
