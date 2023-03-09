@@ -24,23 +24,25 @@
 .movie-not-found-div {
   display: flex;
   flex-direction: column;
+
   width: 90%;
   margin: 0 auto;
   margin-bottom: 7rem;
 
   .movie-not-found-div_details {
-    h3,
-    p {
-      margin: 1rem auto;
-    }
-    h3 {
-      background-color: rgb(170, 161, 161);
-      width: 3rem;
-      height: 1rem;
-    }
   }
-
+  img {
+    width: 10rem;
+    padding: 2rem;
+    border-bottom: 2px solid black;
+  }
+  .movie-not-found-div_details {
+    margin-top: 4rem;
+  }
   @media (min-width: 768px) {
     flex-direction: row;
+    img {
+      border-right: 2px solid black;
+    }
   }
 }

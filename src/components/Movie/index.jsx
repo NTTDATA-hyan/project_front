@@ -2,6 +2,7 @@ import { Button } from "@ui5/webcomponents-react";
 import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useSelector } from "react-redux";
+import wait from "../../assets/pngwing 1.svg";
 import "./style.scss";
 const Movie = () => {
   const movie = useSelector(({ movie }) => movie);
@@ -41,31 +42,13 @@ const Movie = () => {
         </div>
       ) : (
         <div className="movie-not-found-div">
-          <section className="movie-not-found-div_details">
-            <h3></h3>
-            <p></p>
-            <p className="bold"></p>
-            <p className="bold"></p>
-            <Button
-              style={{
-                backgroundColor: "gray",
-                color: "white",
-                border: "none",
-                padding: "auto",
-                hover: "none",
-                cursor: "unset",
-              }}
-            >
-              Favorite <span></span>
-            </Button>
-          </section>
           <section>
             <figure>
-              <img
-                src="https://m.media-amazon.com/images/M/MV5BMTgzNzkxMzk5Nl5BMl5BanBnXkFtZTgwMTQ2MzA2MDE@._V1_SX300.jpg"
-                alt={movie.Title}
-              />
+              <img src={wait} alt={movie.Title} />
             </figure>
+          </section>
+          <section className="movie-not-found-div_details">
+            <p>We are waiting for you to tell us a movie</p>
           </section>
         </div>
       )}
