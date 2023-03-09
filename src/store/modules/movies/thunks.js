@@ -11,6 +11,6 @@ const getMovieThunk = (movie, setError) => (dispatch) => {
         dispatch(getMovie(res.data));
       }
     })
-    .catch((err) => toast.error(err.data));
+    .catch((err) => toast.error(err.message));
 };
 export default getMovieThunk;

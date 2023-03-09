@@ -3,10 +3,15 @@ import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import wait from "../../assets/pngwing 1.svg";
+import Stars from "../Stars";
 import "./style.scss";
 const Movie = () => {
   const movie = useSelector(({ movie }) => movie);
+
   const [like, setLike] = useState(false);
+
+  const stars = movie.Ratings ? movie.Ratings[0].Value : "N/A";
+
   const likeMovie = () => {
     setLike(!like);
   };
@@ -20,7 +25,9 @@ const Movie = () => {
             <p className="bold">
               Actor: <span>{movie.Actors}</span>
             </p>
-            <p className="bold">Review</p>
+            <p className="bold">
+              Review <Stars stars={stars} />
+            </p>
             <Button
               style={{
                 backgroundColor: "red",
