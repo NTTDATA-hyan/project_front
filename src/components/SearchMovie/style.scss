@@ -1,0 +1,20 @@
+.search-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 6rem;
+  margin: 50px auto;
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    section {
+      width: auto;
+      justify-content: baseline;
+    }
+  }
+}
